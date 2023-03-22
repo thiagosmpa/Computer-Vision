@@ -14,8 +14,9 @@ it contains four directories: "1st_manual", "2nd_manual", "mask" and "images". <
 <br />
 For this task, we won't need the directories: "mask" from both training and test set, neither "2nd_manual" from test set. <br />
 this is because only the "1st_manual" will work as the real mask for our images. In this case you will obtain only the images:
-![21_training](https://user-images.githubusercontent.com/33949962/226974924-c2df1c64-205b-42f7-bd33-28c14d119bb0.png)
-![21_manual1](https://user-images.githubusercontent.com/33949962/226975005-6430b54d-f8d0-404d-b0ca-e49a768c8255.gif)
+![21_training](https://user-images.githubusercontent.com/33949962/226976273-4e0d6164-d2a0-447c-bd53-862da84257e3.png)
+
+![21_manual1](https://user-images.githubusercontent.com/33949962/226976350-6c2fc164-8faa-4c3b-82bb-8a47827bc41e.gif)
 <br />
 ### Pre Processing
 
