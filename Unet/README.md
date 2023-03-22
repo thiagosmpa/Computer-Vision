@@ -2,6 +2,7 @@
 ## Dataset - Digital Retinal Images for Vessel Extraction
 Dataset found at: https://www.kaggle.com/datasets/zionfuo/drive2004
 
+
 Python Version - Python 3.9.16
 <br />
 <br />
@@ -76,7 +77,7 @@ After training the data for 50 epochs, learning rate 1e-4, the obtained metrics 
 
 
 
-![21_training](https://user-images.githubusercontent.com/33949962/226974924-c2df1c64-205b-42f7-bd33-28c14d119bb0.png)
+
 
 
 
