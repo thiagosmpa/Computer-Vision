@@ -1,9 +1,8 @@
 # UNET Image Segmentation Using PyTorch
 ## Dataset - Digital Retinal Images for Vessel Extraction
-Dataset found at: https://www.kaggle.com/datasets/zionfuo/drive2004
-<br />
-Credits: https://www.youtube.com/watch?v=T0BiFBaMLDQ <br />
-Special thanks to the teacher from the youtube channel "Idiot Developer"!
+- Dataset found at: https://www.kaggle.com/datasets/zionfuo/drive2004
+- Credits: https://www.youtube.com/watch?v=T0BiFBaMLDQ <br />
+- Special thanks to the teacher from the youtube channel "Idiot Developer"!
 
 Python Version - Python 3.9.16
 <br />
