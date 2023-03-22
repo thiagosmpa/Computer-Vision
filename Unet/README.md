@@ -26,9 +26,11 @@ data_path = './dataset/'
 ```
 The data_path must contain the directory that contains the two directories: "traning" and "test". <br />
 After that, you can also choose whether you want to augment the data or not. <br /> <br />
-**Data Augmentation** is used to create a wider traning dataset, by creating images with modifications of the originals, like: <br />
-Rotation, Vertical or Horizontal Flip. <br />
-But if your machine doesn't have GPU aceleration for the training process, you can choose not to augment data in order to use less data.
+**Data Augmentation** is used to create a wider traning dataset, by creating images with modifications of the originals, like:
+- Rotation
+- Vertical Flipe 
+- Horizontal Flip
+But if your machine doesn't have GPU aceleration for the training process, you can choose not to augment data in order to use less data and save some machine overload.
 ```
 """ Data augmentation """
 augment_data(train_x, train_y, "new_data/train/", augment=False)
