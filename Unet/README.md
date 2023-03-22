@@ -3,7 +3,7 @@
 Dataset found at: https://www.kaggle.com/datasets/zionfuo/drive2004
 <br />
 Credits: https://www.youtube.com/watch?v=T0BiFBaMLDQ <br />
-Special thanks to the channel "Idiot Developer" for the great class for that!
+Special thanks to the channel "Idiot Developer" for the great class!
 
 Python Version - Python 3.9.16
 <br />
@@ -11,8 +11,6 @@ Python Version - Python 3.9.16
 The dataset contain 40 digitalized retina images, divided in Traning set and Test set. <br />
 The training set contains three directories: "1st_manual", "mask" and "images", as for the test data, <br />
 it contains four directories: "1st_manual", "2nd_manual", "mask" and "images". <br />
-
-
 <br />
 For this task, we won't need the directories: "mask" from both training and test set, neither "2nd_manual" from test set. <br />
 this is because only the "1st_manual" will work as the real mask for our images. In this case you will obtain only the images:
