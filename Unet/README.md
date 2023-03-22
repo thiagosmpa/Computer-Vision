@@ -74,4 +74,5 @@ After training the data for 50 epochs, learning rate 1e-4, the obtained metrics 
 <img width="567" alt="Captura de Tela 2023-03-22 às 13 35 47" src="https://user-images.githubusercontent.com/33949962/226974864-8f694fb6-f43f-4714-bd76-b28ea4f7e2d9.png">
 
 Resulting in the following image, which contains the Original Image, Original Mask and Predicted Mask.
-<img width="1433" alt="Captura de Tela 2023-03-22 às 11 28 23" src="https://user-images.githubusercontent.com/33949962/226975712-f4a011e4-8209-4646-9cc9-6e47654a3541.png">
+![01_test_0](https://user-images.githubusercontent.com/33949962/226976110-bf39b330-e67d-4327-9e67-37b7784dfa54.png)
+
