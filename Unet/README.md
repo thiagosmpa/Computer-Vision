@@ -30,6 +30,7 @@ After that, you can also choose whether you want to augment the data or not. <br
 - Rotation
 - Vertical Flipe 
 - Horizontal Flip
+
 But if your machine doesn't have GPU aceleration for the training process, you can choose not to augment data in order to use less data and save some machine overload.
 ```
 """ Data augmentation """
