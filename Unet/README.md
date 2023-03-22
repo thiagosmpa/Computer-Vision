@@ -31,14 +31,14 @@ After that, you can also choose whether you want to augment the data or not. <br
 - Vertical Flipe 
 - Horizontal Flip
 
-But if your machine doesn't have GPU aceleration for the training process, you can choose not to augment data in order to use less data and save some machine overload.
+But if your machine doesn't have GPU aceleration for the training process, you can choose not to augment data in order to use less data and save some machine overload. To choose to augment data or not, just update "augment=True" or "augment=False".
 ```
 """ Data augmentation """
 augment_data(train_x, train_y, "new_data/train/", augment=False)
 augment_data(test_x, test_y, "new_data/test/", augment=False)
 ```
 
-Observation: Data Augmentation is used only in the training process. It doesn't need to augment test data. So choose between "False" or "True" only in the first line. <br /> <br />
+Observation: Data Augmentation is used only in the training process. It doesn't need to augment test data.
 
 ## Traning Process
 After runing correctly the pre processing script, you can run "train.py" in order to train the model.
