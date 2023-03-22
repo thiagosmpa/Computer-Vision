@@ -41,7 +41,7 @@ augment_data(test_x, test_y, "new_data/test/", augment=False)
 Observation: Data Augmentation is used only in the training process. It doesn't need to augment test data.
 
 ## Traning Process
-After runing correctly the pre processing script, you can run "train.py" in order to train the model.
+After runing correctly the pre processing script, you can run "**train.py" in order to train the model.
 
 To see if your machine has or not an available CUDA for training with the GPU, you can run:
 ```
@@ -69,7 +69,7 @@ increasing the number of epochs will increase how many times the model will be t
 modifying the learning rate will increase how fast will the coefficients will increase or decrease. In other words, the loss will decrease faster, but can occur to loose the minimum error - miss the global minimum. <br /> <br />
 
 ## Validation
-Runing the "test.py" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process. <br />
+Runing the "**test.py**" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process. <br />
 In this case, the evaluation metrics used were: <br />
 -   jaccard, f1_score, recall, precision and accuracy. <br />
 After training the data for 50 epochs, learning rate 1e-4, the obtained metrics were:
