@@ -18,6 +18,10 @@ this is because only the "1st_manual" will work as the real mask for our images.
 
 
 ![21_manual1](https://user-images.githubusercontent.com/33949962/226976350-6c2fc164-8faa-4c3b-82bb-8a47827bc41e.gif)
+
+![21_training](https://user-images.githubusercontent.com/33949962/226976601-df3d8538-a4f1-4958-adf4-e7d34392b850.png)
+
+
 <br />
 ### Pre Processing
 
