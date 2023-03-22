@@ -53,9 +53,6 @@ This will load the model by the best checkpoint and keep training from that. If 
 For Fine Tuning, you can choose the Hyperparameters in:
 ```
 """ Hyperparameters """
-    H = 512
-    W = 512
-    size = (H, W)
     batch_size = 2
     num_epochs = 50
     lr = 1e-4
