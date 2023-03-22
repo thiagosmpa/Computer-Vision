@@ -9,10 +9,13 @@ Python Version - Python 3.9.16
 The dataset contain 40 digitalized retina images, divided in Traning set and Test set. <br />
 The training set contains three directories: "1st_manual", "mask" and "images", as for the test data, <br />
 it contains four directories: "1st_manual", "2nd_manual", "mask" and "images". <br />
+
+
 <br />
 For this task, we won't need the directories: "mask" from both training and test set, neither "2nd_manual" from test set. <br />
-this is because only the "1st_manual" will work as the real mask for our images.
-<br />
+this is because only the "1st_manual" will work as the real mask for our images. In this case you will obtain only the images:
+![21_training](https://user-images.githubusercontent.com/33949962/226974924-c2df1c64-205b-42f7-bd33-28c14d119bb0.png)
+![21_manual1](https://user-images.githubusercontent.com/33949962/226975005-6430b54d-f8d0-404d-b0ca-e49a768c8255.gif)
 <br />
 ### Pre Processing
 
@@ -70,15 +73,5 @@ After training the data for 50 epochs, learning rate 1e-4, the obtained metrics 
 
 <img width="567" alt="Captura de Tela 2023-03-22 às 13 35 47" src="https://user-images.githubusercontent.com/33949962/226974864-8f694fb6-f43f-4714-bd76-b28ea4f7e2d9.png">
 
-
-
-
-
-
-
-
-
-
-
-
-![21_manual1](https://user-images.githubusercontent.com/33949962/226975005-6430b54d-f8d0-404d-b0ca-e49a768c8255.gif)
+Resulting in the following image, which contains the Original Image, Original Mask and Predicted Mask.
+<img width="1433" alt="Captura de Tela 2023-03-22 às 11 28 23" src="https://user-images.githubusercontent.com/33949962/226975712-f4a011e4-8209-4646-9cc9-6e47654a3541.png">
