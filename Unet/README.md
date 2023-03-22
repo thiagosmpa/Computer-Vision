@@ -62,7 +62,22 @@ increasing the number of epochs will increase how many times the model will be t
 modifying the learning rate will increase how fast will the coefficients will increase or decrease. In other words, the loss will decrease faster, but can occur to loose the minimum error - miss the global minimum. <br /> <br />
 
 ### Validation
-Runing the "test.py" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process.
+Runing the "test.py" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process. <br />
+In this case, the evaluation metrics used were: <br />
+-   jaccard, f1_score, recall, precision and accuracy. <br />
+After training the data for 50 epochs, learning rate 1e-4, the obtained metrics were:
 
-<img width="700" alt="Captura de Tela 2023-03-22 às 11 31 58" src="https://user-images.githubusercontent.com/33949962/226971742-6d250f1e-2a86-4dfd-80bb-21c562cc2eee.png">
+<img width="567" alt="Captura de Tela 2023-03-22 às 13 35 47" src="https://user-images.githubusercontent.com/33949962/226974864-8f694fb6-f43f-4714-bd76-b28ea4f7e2d9.png">
 
+
+
+
+
+
+
+
+![21_training](https://user-images.githubusercontent.com/33949962/226974924-c2df1c64-205b-42f7-bd33-28c14d119bb0.png)
+
+
+
+![21_manual1](https://user-images.githubusercontent.com/33949962/226975005-6430b54d-f8d0-404d-b0ca-e49a768c8255.gif)
