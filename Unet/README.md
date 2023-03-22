@@ -19,7 +19,7 @@ this is because only the "1st_manual" will work as the real mask for our images.
 
 ![21_manual1](https://user-images.githubusercontent.com/33949962/226976350-6c2fc164-8faa-4c3b-82bb-8a47827bc41e.gif)
 
-<br />
+
 ## Pre Processing
 
 Before runing the code, make sure that the dataset directories is correct.
