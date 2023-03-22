@@ -2,7 +2,7 @@
 ## Dataset - Digital Retinal Images for Vessel Extraction
 Dataset found at: https://www.kaggle.com/datasets/zionfuo/drive2004
 <br />
-Credits: https://www.youtube.com/watch?v=T0BiFBaMLDQ
+Credits: https://www.youtube.com/watch?v=T0BiFBaMLDQ <br />
 Special thanks to the channel "Idiot Developer" for the great class for that!
 
 Python Version - Python 3.9.16
