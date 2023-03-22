@@ -41,7 +41,7 @@ augment_data(test_x, test_y, "new_data/test/", augment=False)
 Observation: Data Augmentation is used only in the training process. It doesn't need to augment test data.
 
 ## Traning Process
-After runing correctly the pre processing script, you can run "**train.py" in order to train the model.
+After runing correctly the pre processing script, you can run "**train.py**" in order to train the model.
 
 To see if your machine has or not an available CUDA for training with the GPU, you can run:
 ```
