@@ -63,3 +63,6 @@ modifying the learning rate will increase how fast will the coefficients will in
 
 ### Validation
 Runing the "test.py" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process.
+
+<img width="700" alt="Captura de Tela 2023-03-22 às 11 31 58" src="https://user-images.githubusercontent.com/33949962/226971742-6d250f1e-2a86-4dfd-80bb-21c562cc2eee.png">
+
