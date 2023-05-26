@@ -15,18 +15,18 @@ predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 # start camera
 cap = cv2.VideoCapture(0)
 
-ret, frame = cap.read()
-face_shape = frame.shape
-size_ratio = 10
-
-# resize image
-frame = cv2.resize(frame, (face_shape[1]//size_ratio, face_shape[0]//size_ratio))
-
 while True:
     
     ret, frame = cap.read()
+    
+    size = frame.shape
+    aspect_ratio = 1
 
-    rects = detector(frame, 1)
+    # resize frame with aspect ratio
+    frame = cv2.resize(frame, (size[1]//aspect_ratio, size[0]//aspect_ratio))
+    
+    # detect faces
+    rects = detector(frame, 0)
 
     # for loop is used to detect multiple faces in the frame
     for (i, rect) in enumerate(rects):
