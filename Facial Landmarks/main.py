@@ -4,8 +4,10 @@
 
 import dlib
 import cv2
+import imutils
 import numpy as np
 from imutils import face_utils
+from imutils.video import VideoStream
 
 # start detector and predictor
 detector = dlib.get_frontal_face_detector()
@@ -13,17 +15,14 @@ predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
 # download predictor from link: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 
 # start camera
-cap = cv2.VideoCapture(0)
+cap = VideoStream(0).start()
 
 while True:
     
-    ret, frame = cap.read()
-    
-    size = frame.shape
-    aspect_ratio = 1
+    frame = cap.read()
 
     # resize frame with aspect ratio
-    frame = cv2.resize(frame, (size[1]//aspect_ratio, size[0]//aspect_ratio))
+    frame = imutils.resize(frame, width=640)
     
     # detect faces
     rects = detector(frame, 0)
