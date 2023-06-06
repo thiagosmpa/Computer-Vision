@@ -1,58 +1,108 @@
-# Code README
+# Facial Landmark Detection using dlib
 
-This README file provides an overview of the code provided. The code is written in Python and is used for detecting drowsiness and yawns in a live video stream. It uses the dlib library for face detection and facial landmark detection.
+This code demonstrates how to use the dlib library to detect facial landmarks in real-time using a webcam. It uses the pre-trained shape predictor model from dlib to detect and locate 68 facial landmarks on detected faces.
 
-## Requirements
-- Python 3.x
-- OpenCV (`cv2`)
-- Numpy
-- Matplotlib
-- Imutils
-- dlib
- 
-(You can run pip install -r requirements.txt in order to install the required dependencies)
+## Prerequisites
 
-Make sure these dependencies are installed before running the code.
+Before running the code, make sure you have the following prerequisites:
 
-## Setup
-1. Download the shape predictor model from the link: [shape_predictor_68_face_landmarks.dat](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2).
-2. Place the downloaded `shape_predictor_68_face_landmarks.dat` file in the same directory as the code file.
-
-## Code Explanation
-The code performs the following tasks:
-
-1. Imports the required libraries and modules.
-2. Initializes the eye and mouth characteristic classes (`eyes_characteristics` and `mouth_characteristics`) from a separate module called `drowsiness_detect`.
-3. Sets threshold values and counters for drowsiness and yawn detection.
-4. Initializes a matplotlib figure and axes for real-time plotting of eye aspect ratio (EAR) and mouth aspect ratio (MAR).
-5. Starts the video stream using a webcam or a recorded video file.
-6. Enters a loop to process each frame of the video stream.
-7. Resizes the frame, converts it to grayscale, and detects faces using the dlib frontal face detector.
-8. For each detected face, extracts facial landmarks using the shape predictor model.
-9. Draws bounding boxes, eyes, and mouth contours on the frame.
-10. Calculates the eye aspect ratio (EAR) and mouth aspect ratio (MAR) based on the extracted landmarks.
-11. Updates the EAR and MAR values, and checks for drowsiness and yawn conditions based on the thresholds.
-12. Plots the real-time EAR and MAR values over the last 30 frames using matplotlib.
-13. Displays the frame with annotations on a separate window.
-14. Checks for the 'q' key press to exit the loop.
-15. After the loop ends, the code saves the plot as `plot.png` and creates a video file named `output.avi` using the saved plot frames.
+- Python 3.9.16 installed
+- Install the required dependencies using `pip install -r requirements.txt`
+- Download the shape predictor model file "shape_predictor_68_face_landmarks.dat" from the dlib website: [shape_predictor_68_face_landmarks](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
+- Extract the file and place it in the same directory as the code file.
 
 ## Usage
-1. Ensure the code file, the `shape_predictor_68_face_landmarks.dat` file, and the video file (or webcam) are in the same directory.
-2. Modify the `VideoStream` line to specify the video file path if not using the webcam.
-3. Run the code.
-4. The video stream window will open, showing the annotated frames with drowsiness and yawn alerts.
-5. The plots for EAR and MAR will be displayed in separate matplotlib windows.
-6. Press 'q' to quit the program.
 
-## Code explanation
+1. Clone or download the code file to your local machine.
+2. Install the required dependencies using `pip install -r requirements.txt`.
+3. Download the shape predictor model file from the link provided above and place it in the same directory as the code file.
+4. Run the code using `python <filename>.py`.
+5. A new window will open showing the webcam feed with facial landmarks detected in real-time.
+6. Press the 'q' key to exit the program.
+
+## Code Explanation
+
+The code begins by importing the necessary libraries: dlib, OpenCV, NumPy, matplotlib, and imutils.
 
 ```
-# Start video stream (live videostream in blank for a webcam recording)
+python
+import dlib
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import imutils
+from imutils import face_utils
+from imutils.video import VideoStream
+from drowsiness_detect import eyes_characteristics, mouth_characteristics
+```
+
+Next, the code initializes the face detector and shape predictor using the pre-trained model.
+
+```
+predictor_location = '../shape_predictor_68_face_landmarks.dat'
+detector = dlib.get_frontal_face_detector()
+predictor = dlib.shape_predictor(predictor_location)
+```
+
+The code also sets up the necessary variables and objects for drowsiness detection and mouth characteristics.
+
+Inside the main loop, the code continuously reads frames from the webcam and performs facial landmark detection.
+
+```
 cap = VideoStream('src/video.MOV').start()
-```
-In this section, you can opt to run camera live stream instead of "video.MOV", to do this, just leave blank the obj VideoStream().start().
 
+while True:
+    frame = cap.read()
+    if frame is None:
+        break
+
+    # Preprocess frame and convert to grayscale
+    frame = imutils.resize(frame, width=1024)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Detect faces using the face detector
+    rects = detector(gray, 0)
+
+    for (i, rect) in enumerate(rects):
+        # Get face landmarks
+        reference_points = predictor(frame, rect)
+        reference_points = face_utils.shape_to_np(reference_points)
+
+        # Draw bounding box on face
+        # cv2.rectangle(frame, (rect.left(), rect.top()), (rect.right(), rect.bottom()), (0, 255, 0), 2)
+
+        # Get eyes and mouth
+        left_eye, right_eye = eyeChar.get_eyes(reference_points)
+        mouth = mouthChar.get_mouth(reference_points)
+
+        # Draw contours of eyes and mouth
+        # ...
+
+        # Calculate eye aspect ratio (EAR) and mouth aspect ratio (MAR)
+        # ...
+
+        # Set drowsiness and yawn alerts
+        # ...
+
+        # Prepare data for real-time plotting
+        # ...
+
+        # Display frame with overlays
+        cv2.imshow('frame', frame)
+
+        # Check for 'q' key press to exit the program
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+# Clean up and release resources
+cv2.destroyAllWindows()
+cap.stop()
+
+# Save plot to file
+fig.savefig('plot.png')
+
+# Save video
+# ...
 ```
-cap = VideoStream().start()
-```
+
+You can customize the code further based on your specific requirements. Make sure to provide the correct video source and adjust any thresholds or parameters as needed.
