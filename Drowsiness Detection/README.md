@@ -105,4 +105,11 @@ fig.savefig('plot.png')
 # ...
 ```
 
+Also, 
+```
+cap = VideoStream().start()
+```
+
+with no arguments can be used in order to detect drowsiness via webcam, instead of loading a video.
+
 You can customize the code further based on your specific requirements. Make sure to provide the correct video source and adjust any thresholds or parameters as needed.
