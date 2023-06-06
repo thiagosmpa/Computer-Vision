@@ -9,6 +9,8 @@ This README file provides an overview of the code provided. The code is written 
 - Matplotlib
 - Imutils
 - dlib
+ 
+(You can run pip install -r requirements.txt in order to install the required dependencies)
 
 Make sure these dependencies are installed before running the code.
 
