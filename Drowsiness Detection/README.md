@@ -45,3 +45,14 @@ The code performs the following tasks:
 5. The plots for EAR and MAR will be displayed in separate matplotlib windows.
 6. Press 'q' to quit the program.
 
+## Code explanation
+
+```
+# Start video stream (live videostream in blank for a webcam recording)
+cap = VideoStream('src/video.MOV').start()
+```
+In this section, you can opt to run camera live stream instead of "video.MOV", to do this, just leave blank the obj VideoStream().start().
+
+```
+cap = VideoStream().start()
+```
