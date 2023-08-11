@@ -6,8 +6,8 @@ This repository contains a Python script that utilizes the YOLO object detection
 
 Before running the script, make sure you have the following:
 
-- Python 3.6 or later
-- Required packages: `ultralytics`, `opencv-python`, `supervision` from Roboflow and custom packages (`trackingtools`) which you can include by installing them or placing them in the same directory as the script.
+- Python 3.9.16
+- Required packages: `ultralytics`, `opencv-python`, `supervision`, found in "requirements.txt" file.
 - Pre-trained YOLO model weights (`yolov8s.pt`), which will be downloaded automatically when loaded. 
 
 ## Usage
