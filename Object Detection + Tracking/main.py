@@ -15,7 +15,10 @@ LINE_END = sv.Point(1280, 450)
 def main():
     print('Starting main...')
     
-    output_filename = 'output_video.mp4'
+    if not os.path.exists('./output'):
+        os.mkdir('./output')
+    output_filename = './output/output_video.mp4'
+    
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Specify the codec ('mp4v' for MP4)
     out = cv2.VideoWriter(output_filename, fourcc, 25.0, (1280, 720))  # Video is written in 25 FPS, 1280x720
     
