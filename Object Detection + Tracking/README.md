@@ -1,4 +1,4 @@
-# Vehicle Tracking with YOLO and Line Detection
+# Vehicle Tracking with YOLOV8
 
 This repository contains a Python script that utilizes the YOLO object detection model for vehicle tracking. It employs the Ultralytics YOLO library, OpenCV, and custom utilities for tracking and supervision.
 
@@ -7,7 +7,7 @@ This repository contains a Python script that utilizes the YOLO object detection
 Before running the script, make sure you have the following:
 
 - Python 3.9.16
-- Required packages: `ultralytics`, `opencv-python`, `supervision`, found in "requirements.txt" file.
+- Required packages: `ultralytics`, `opencv-python`, `supervision`, found in `requirements.txt` file.
 - Pre-trained YOLO model weights (`yolov8s.pt`), which will be downloaded automatically when loaded. 
 
 ## Usage
