@@ -1,6 +1,11 @@
 # Vehicle Tracking with YOLOV8
 
-This repository contains a Python script that utilizes the YOLO object detection model for vehicle tracking. It employs the Ultralytics YOLO library, OpenCV, and custom utilities for tracking and supervision.
+This code used `YOLOV8` with native Tracking support to detect cars, buses, and trucks and track them on the roadway. Tracking tools can be used to give each object an unique ID, which will be used to follow this object through the next frames of the video. 
+
+In addition, this implementation integrates `Supervision` tools, from Roboflow to provide robust support for annotation tasks within the images, thereby enhancing the accuracy and comprehensiveness of object detection and understanding.
+
+![Vehicle Tracking Demo]](/Users/thiagomachado/Documents/Projects/Python/Computer Vision/Object Detection/Tracking/output.png)
+
 
 ## Prerequisites
 
