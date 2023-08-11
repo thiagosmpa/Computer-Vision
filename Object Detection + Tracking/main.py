@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from ultralytics import YOLO
 import cv2
 import supervision as sv
@@ -5,12 +7,7 @@ import numpy as np
 from trackingtools import track_vehicles
 import os
 
-# source = '/Users/thiagomachado/Documents/Projects/Python/Computer Vision/Datasets/Object Detection/Traffic/video.mp4'
-source = '/Users/thiagomachado/Documents/Projects/Python/Computer Vision/Datasets/Object Detection/Traffic/traffic.jpg'
-file_extension = os.path.splitext(source)[1]
-
-model_source = '/Users/thiagomachado/Documents/Projects/Python/Computer Vision/models/yolov8s.pt'
-
+source = './src/video.mp4'
 
 LINE_START = sv.Point(0, 450)
 LINE_END = sv.Point(1280, 450)
@@ -22,7 +19,7 @@ def main():
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Specify the codec ('mp4v' for MP4)
     out = cv2.VideoWriter(output_filename, fourcc, 25.0, (1280, 720))  # Video is written in 25 FPS, 1280x720
     
-    model = YOLO(model_source)
+    model = YOLO('yolov8s.pt')
     line_zone = sv.LineZone(LINE_START, LINE_END)
     
     box_annotator = sv.BoxAnnotator(
