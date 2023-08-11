@@ -2,7 +2,7 @@
 
 <img width="640" alt="output" src="https://github.com/thiagosmpa/Computer-Vision/assets/33949962/dc2594dd-93f9-4430-93f5-111b4066bb71">
 
-This code used `YOLOV8` with native Tracking support to detect cars, buses, and trucks and track them on the roadway. Tracking tools can be used to give each object an unique ID, which will be used to follow this object through the next frames of the video. 
+This code used `YOLOV8` with native Tracking support to **Detect** vehicles, **Count** them and **Track** them on the roadway. Tracking tools can be used to give each object an unique ID, which will be used to follow this object through the next frames of the video. 
 
 In addition, this implementation integrates `Supervision` tools, from Roboflow to provide robust support for annotation tasks within the images, thereby enhancing the accuracy and comprehensiveness of object detection and understanding.
 
