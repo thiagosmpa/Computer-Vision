@@ -1,4 +1,8 @@
 # UNET Image Segmentation Using PyTorch
+
+<img width="1146" alt="result" src="https://github.com/thiagosmpa/Computer-Vision/assets/33949962/1261b3b6-0e18-48c1-9236-d809bde47de4">
+
+
 ## Dataset - Digital Retinal Images for Vessel Extraction
 - Dataset found at: https://www.kaggle.com/datasets/zionfuo/drive2004
 - Credits: https://www.youtube.com/watch?v=T0BiFBaMLDQ <br />
@@ -10,8 +14,6 @@ The dataset contain 40 digitalized retina images, divided in Traning set and Tes
 The training set contains three directories: "1st_manual", "mask" and "images", as for the test data, it contains four directories: "1st_manual", "2nd_manual", "mask" and "images". <br />
 <br />
 For this task, we won't need the directories: "mask" from both training and test set, neither "2nd_manual" from test set. This is because only the "1st_manual" will work as the real mask for our images. In this case you will obtain only the images:
-
-<img width="1146" alt="result" src="https://github.com/thiagosmpa/Computer-Vision/assets/33949962/1261b3b6-0e18-48c1-9236-d809bde47de4">
 
 
 ## Pre Processing
