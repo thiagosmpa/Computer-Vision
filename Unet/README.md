@@ -11,9 +11,7 @@ The training set contains three directories: "1st_manual", "mask" and "images", 
 <br />
 For this task, we won't need the directories: "mask" from both training and test set, neither "2nd_manual" from test set. This is because only the "1st_manual" will work as the real mask for our images. In this case you will obtain only the images:
 
-![21_training](https://user-images.githubusercontent.com/33949962/226976601-df3d8538-a4f1-4958-adf4-e7d34392b850.png)
-
-![21_manual1](https://user-images.githubusercontent.com/33949962/226976350-6c2fc164-8faa-4c3b-82bb-8a47827bc41e.gif)
+<img width="1146" alt="result" src="https://github.com/thiagosmpa/Computer-Vision/assets/33949962/1261b3b6-0e18-48c1-9236-d809bde47de4">
 
 
 ## Pre Processing
@@ -23,6 +21,7 @@ Before runing the code, make sure that the dataset directories is correct.
 """ Load the data """
 data_path = './dataset/'
 ```
+
 The data_path must contain the directory that contains the two directories: "traning" and "test". <br />
 After that, you can also choose whether you want to augment the data or not. <br /> <br />
 **Data Augmentation** is used to create a wider traning dataset, by creating images with modifications of the originals, like:
@@ -68,13 +67,9 @@ increasing the number of epochs will increase how many times the model will be t
 modifying the learning rate will increase how fast will the coefficients will increase or decrease. In other words, the loss will decrease faster, but can occur to loose the minimum error - miss the global minimum. <br /> <br />
 
 ## Validation
-Runing the "**test.py**" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process. <br />
+Runing the "**inference.py**" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process. <br />
 In this case, the evaluation metrics used were: <br />
 -   jaccard, f1_score, recall, precision and accuracy. <br />
 After training the data for 50 epochs, learning rate 1e-4, the obtained metrics were:
 
 <img width="567" alt="Captura de Tela 2023-03-22 às 13 35 47" src="https://user-images.githubusercontent.com/33949962/226974864-8f694fb6-f43f-4714-bd76-b28ea4f7e2d9.png">
-
-Resulting in the following image, which contains the Original Image, Original Mask and Predicted Mask.
-![01_test_0](https://user-images.githubusercontent.com/33949962/226976110-bf39b330-e67d-4327-9e67-37b7784dfa54.png)
-
