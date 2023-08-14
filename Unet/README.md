@@ -68,7 +68,7 @@ Which the important ones are the **num_epochs** that stands for the number of ep
 increasing the number of epochs will increase how many times the model will be training and <br />
 modifying the learning rate will increase how fast will the coefficients will increase or decrease. In other words, the loss will decrease faster, but can occur to loose the minimum error - miss the global minimum. <br /> <br />
 
-## Validation
+## Inference
 Runing the "**inference.py**" will create a directory with the results and run the evaluation metrics for the model. To evaluate the model, this script will load the checkpoints saved from the training process. <br />
 In this case, the evaluation metrics used were: <br />
 -   jaccard, f1_score, recall, precision and accuracy. <br />
