@@ -82,11 +82,12 @@ if __name__ == "__main__":
     print(f"Test: {len(test_x)} - {len(test_y)}")
 
     """ Create directories to save the augmented data """
-    create_dir("new_data/train/image/")
-    create_dir("new_data/train/mask/")
-    create_dir("new_data/test/image/")
-    create_dir("new_data/test/mask/")
+    create_dir("new_dataset/train/image/")
+    create_dir("new_dataset/train/mask/")
+    create_dir("new_dataset/test/image/")
+    create_dir("new_dataset/test/mask/")
+    os.rename("dataset", "old_dataset")
 
     """ Data augmentation """
-    augment_data(train_x, train_y, "new_data/train/", augment=False)
-    augment_data(test_x, test_y, "new_data/test/", augment=False)
+    augment_data(train_x, train_y, "new_dataset/train/", augment=False)
+    augment_data(test_x, test_y, "new_dataset/test/", augment=False)
